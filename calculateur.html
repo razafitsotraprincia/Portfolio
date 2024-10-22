@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculateur de prêt hypothécaire</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Barre de menu -->
+    <header>
+        <h1>Mon Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="index.html#about">À propos</a></li>
+                <li><a href="calculateur.html">Calculateur Hypothécaire</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenu principal du calculateur -->
+    <section>
+        <h2>Calculateur de prêt hypothécaire</h2>
+        
+        <form onsubmit="event.preventDefault(); calculerPaiementMensuel();">
+            <label for="montant">Montant du prêt (€) :</label>
+            <input type="number" id="montant" placeholder="Entrez le montant du prêt" required><br><br>
+            
+            <label for="taux">Taux d'intérêt annuel (%) :</label>
+            <input type="number" id="taux" placeholder="Entrez le taux d'intérêt annuel" required step="0.01"><br><br>
+            
+            <label for="duree">Durée (années) :</label>
+            <input type="number" id="duree" placeholder="Entrez la durée du prêt en années" required><br><br>
+            
+            <button type="submit">Calculer</button>
+        </form>
+        
+        <p id="resultat"></p>
+    </section>
+
+    <!-- Inclusion du fichier script.js pour le calculateur -->
+    <script src="script.js"></script>
+
+</body>
+</html>
